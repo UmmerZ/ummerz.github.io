@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact me</title>
+    <link rel="stylesheet" href="../css/contact.css" />
+    <script src="../js/script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Contact Me</h1>
+    </header>
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../img/logocss.jpg" alt="logo Ummer Zaman" />
+      </a>
+    </div>
+
+    <form
+      action="mailto:write2ummer@yahoo.com"
+      method="post"
+      enctype="text/plain"
+    >
+      <div class="name">
+        <label for="name"> Name <br /> </label>
+        <input id="name" type="text" />
+        <br />
+        <label for="email"> Email </label>
+      </div>
+      <div class="email">
+        <input id="email" type="text" class="senderEmail" />
+        <br />
+        <label for="subject"> Subject </label>
+      </div>
+      <div class="subject">
+        <input id="subject" type="text" />
+        <br />
+        <label for="phoneType"> Phone Number </label>
+      </div>
+      <div>
+        <select name="phoneType" id="phoneType" class="dropdown">
+          <option value="Cell">Cellphone</option>
+          <option value="Home">LandLine</option>
+        </select>
+        <input type="text" name="number" id="number" />
+      </div>
+      <div>
+        <label for="preferBy" id="responseMethod" class="prefer">
+          Prefer Response by:
+          <br />
+        </label>
+        <select name="prefer" id="preferBy" class="prefer">
+          <option value="Phone">Phone</option>
+          <option value="Email">Email</option>
+        </select>
+      </div>
+      <div>
+        <label for="textarea" class="message"> Message</label>
+        <br />
+        <textarea name="message" id="textarea" cols="100" rows="20"></textarea>
+        <br />
+      </div>
+
+      <button class="submit" type="submit" id="button" class="submit">
+        Submit
+      </button>
+    </form>
+  </body>
+</html>
