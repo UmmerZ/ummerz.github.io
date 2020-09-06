@@ -1,59 +1,143 @@
 * {
-  background: rgba(225, 226, 225, 0.5);
+  font-family: "Noto Sans TC", sans-serif;
   box-sizing: border-box;
-  font-family: "droid Serif";
-  text-align: center;
-  margin: 0px;
-  padding: 0px;
 }
 
+:root {
+  --fw-reg: 300;
+  --fw-bold: 900;
 
-img {
-  height: 10vw;
-  width: auto;
+  --clr-light: #eeebea;
+  --clr-dark: #868282;
+  --clr-accent: #5eb85b;
+  --clr-darkt: #4b4947;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 1.5rem;
+  --fs-body: 1 rem;
 }
-
+section {
+  padding: 5em 2em;
 }
 .logo {
-  cursor: pointer;
+  display: none;
 }
-.title div {
-  color: white;
-  background-color: grey;
+img {
   width: 100%;
-  height: 50%;
+  display: block;
+  opacity: 0.8;
+}
+.bio_head {
+  font-weight: var(--fw-reg);
+  grid-area: bio_head;
+}
+.intro_image {
+  grid-area: into_image;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4rem;
+    --fs-h2: 3rem;
+    --fs-h3: 1.75rem;
+    --fs-body: 1.5rem;
+  }
 }
 body {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100px 250px 250px 250px 150px 150px;
-  grid-template-areas:
-    "logo nav"
-    "title title"
-    "work" "work"
-    "skills skills"
-    "education education"
-    "hobbies hobbies";
+  background: var(--clr-light);
+  color: var(--clr-darkt);
+  margin: 0px;
+  line-height: 1.5;
+  align-items: center;
 }
-.bars {
-  grid-area: bars; 
+h1 {
+  font-size: var(--fs-h1);
 }
-.logo {
-  grid-area: logo;
+h2 {
+  font-size: var(--fs-h2);
 }
-.nav {
-  grid-area: nav;
+h3 {
+  font-size: var(--fs-h3);
 }
 .title {
-  grid-area: title;
+  margin-bottom: 0.3em;
+}
+.bio_p {
+  margin: 0;
+  font-size: var(--fs-h3);
+  grid-area: bio_p;
+}
+.bio_p,
+.workTitle,
+.skillsIntro {
+  background: var(--clr-accent);
+}
+.bio_p {
+  margin-bottom: 1rem;
+}
+.title {
+}
+@media (min-width: 600px) {
+  .title {
+    display: grid;
+    grid-column-gap: 0.5em;
+    margin: 0 auto;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:
+      "into_image bio_head "
+      "into_image bio_p";
+  }
+  .into_image {
+    grid-area: into_image;
+    min-width: 250px;
+  }
+  .bio_p {
+    align-self: start;
+    grid-column: -1 /1;
+    grid-row: 2;
+    text-align: right;
+    left: 2em;
+    width: calc(100% + 2em);
+  }
+}
+.skillsSection {
+  background-color: var(--clr-dark);
+  background-image: url(../img/work_image.jpg);
+  background-size: cover;
+  color: var(--clr-light);
+  background-blend-mode: multiply;
+  text-align: center;
+  margin: 2em 2em 2em 2em;
 }
 
-.work {
-  grid-area: work;
+@media (min-width: 800px) {
+  .skills {
+    display: flex;
+    margin: 0 auto;
+  }
 }
-.skills {
-  grid-area: skills;
+
+.workExperience {
+  background-color: var(--clr-dark);
+  background-image: url(../img/workExp.jpg);
+  background-size: cover;
+  color: var(--clr-light);
+  background-blend-mode: multiply;
+  padding: 5em 3em;
+  text-align: center;
+  margin: 2em 2em 2em 2em;
 }
-.education {
-  grid-area: education;
+
+@media (min-width: 800px) {
+  .work_list {
+    display: flex;
+    margin: 5em auto;
+  }
+  .work {
+    padding: 5em auto;
+  }
 }
