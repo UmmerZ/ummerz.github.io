@@ -70,8 +70,10 @@ h3 {
   grid-area: bio_p;
   color: var(--clr-light);
 }
+
 .bio_p,
 .btn,
+.objectiveTitle,
 .workTitle,
 .skillsIntro,
 .educationTitle,
@@ -85,18 +87,20 @@ h3 {
     rgb(0, 0, 0)
   );
 }
-
+.into_image {
+}
 .bio_p {
   margin-bottom: 1rem;
+  display: inline-block;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .title {
-    padding: 5em 10em 5em 10em;
     display: grid;
-    grid-column-gap: 0.5em;
+    text-align: center;
+    margin: 0 200px;
 
-    grid-template-columns: 30% 70%;
+    grid-template-columns: min-content max-content;
     grid-template-areas:
       "into_image bio_head "
       "into_image bio_p";
@@ -104,6 +108,7 @@ h3 {
   .into_image {
     grid-area: into_image;
     min-width: 250px;
+    padding-left: 2em;
   }
   .bio_p {
     align-self: start;
@@ -173,18 +178,25 @@ h3 {
   color: var(--clr-light);
 }
 .btn {
-  background: var(--clr-light);
+  color: var(--clr-light);
+  background: var(--clr-dark);
   border-radius: 5px;
   padding: 5px 5px 5px 5px;
   border-style: solid;
   margin-top: 2em;
-
-  margin: 1em 1em 1em 1em;
+  border-color: var(--clr-darkt);
+  margin: 1em 0.5em 1em 0.5em;
   text-decoration: none;
 }
 .btn:hover {
   background: rgb(179, 192, 152);
   cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    #8fe076,
+    rgb(0, 0, 0)
+  );
 }
 @media (min-width: 800px) {
   .hobbiesList {
@@ -270,9 +282,9 @@ nav ul li a:hover {
   }
 }
 .project {
-  background: var(--clr-dark);
   padding: 0em 1em 0em 1em;
   color: var(--clr-light);
+  text-align: center;
 }
 .projectsTitle {
   color: var(--clr-light);
@@ -282,5 +294,39 @@ nav ul li a:hover {
   .projectsList {
     display: flex;
     margin: 0px 5px 0px 5px;
+    padding: 1em 1em 1em 1em;
   }
+}
+.sectionObj {
+  text-align: center;
+}
+.facebookIcon,
+.instaIcon,
+.linkedinIcon,
+.githubIcon {
+  margin: 0 1em;
+}
+.sectionSocialMedia {
+  background: var(--clr-dark);
+  margin: 2em 2em 2em 2em;
+  text-align: center;
+  color: var(--clr-light);
+}
+footer {
+  font-size: var(--fs-body);
+  text-align: center;
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  margin: 2em 1.3em 2em 1.3em;
+}
+.projectsSection {
+  background: var(--clr-dark);
+  background-image: url(../img/project.jpg);
+  background-blend-mode: multiply;
+  margin: 2em 2em 2em 2em;
+  text-align: center;
+}
+.socialHead {
+  background: #3f6ce7;
+  background-image: linear-gradient(to right, #868282, #3f6ce7, #868282);
 }

@@ -10,6 +10,10 @@ body {
   text-align: center;
   align: center;
 }
+.container{
+    background-color: #999ac4;
+    max-width: 100%;
+}
 
 input {
   border-radius: 5px;
@@ -71,4 +75,10 @@ body {
 }
 form {
   enable-background: grey;
+}
+@media (min-width: 800px) {
+  .form {
+    display: grid;
+    grid
+  }
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact me</title>
     <link rel="stylesheet" href="../css/contact.css" />
-    <script src="../js/script.js" defer></script>
+    <script src="contact.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
       rel="stylesheet"
@@ -22,11 +22,7 @@
       </a>
     </div>
 
-    <form
-      action="mailto:write2ummer@yahoo.com"
-      method="post"
-      enctype="text/plain"
-    >
+    <form class="form" id="form" method="post" enctype="text/plain">
       <div class="name">
         <label for="name"> Name <br /> </label>
         <input id="name" type="text" />
@@ -67,9 +63,7 @@
         <br />
       </div>
 
-      <button class="submit" type="submit" id="button" class="submit">
-        Submit
-      </button>
+      <button type="submit" id="submit" class="submit">Submit</button>
     </form>
   </body>
 </html>
