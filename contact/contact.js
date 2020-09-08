@@ -48,7 +48,6 @@ function swearCheck(e) {
   else {
     e.preventDefault();
   }
-
-
 }
     
+//borrowed code citation added on readme.
