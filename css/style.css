@@ -268,8 +268,7 @@ nav ul li a:hover {
 }
 .navExpand .nav {
   transform: translateX(0);
-  background-image: url(../img/stars.jpg);
-  background-size: cover;
+  background: #3f6ce7;
   background-blend-mode: multiply;
 }
 .navExpand .navToggle {
@@ -277,8 +276,7 @@ nav ul li a:hover {
 }
 @media (min-width: 800px) {
   ul {
-    position: fixed;
-    color: var(--clr-darkt);
+   
   }
 }
 .project {

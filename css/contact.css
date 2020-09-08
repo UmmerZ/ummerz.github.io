@@ -79,6 +79,10 @@ form {
 @media (min-width: 800px) {
   .form {
     display: grid;
-    grid
+    
   }
+}
+.errorClass{
+color: #d81545;
+
 }

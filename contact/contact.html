@@ -15,14 +15,11 @@
   <body>
     <header class="header">
       <h1>Contact Me</h1>
-    </header>
-    <div class="logo">
-      <a href="../index.html">
-        <img src="../img/logocss.jpg" alt="logo Ummer Zaman" />
-      </a>
-    </div>
+   
 
-    <form class="form" id="form" method="post" enctype="text/plain">
+    <form class="form" id="form"
+    action="javascript: sendemail()"
+    method="POST" enctype="text/plain">
       <div class="name">
         <label for="name"> Name <br /> </label>
         <input id="name" type="text" />
@@ -57,13 +54,19 @@
         </select>
       </div>
       <div>
-        <label for="textarea" class="message"> Message</label>
+        <label for="textArea" class="message"> Message</label>
         <br />
-        <textarea name="message" id="textarea" cols="100" rows="20"></textarea>
+        <textarea name="message" id="textArea" cols="100" rows="20"></textarea>
         <br />
       </div>
 
       <button type="submit" id="submit" class="submit">Submit</button>
     </form>
+    <div>
+      <ul id= "errorList" class="errorClass">
+        
+        
+      </ul>
+    </div>
   </body>
 </html>
